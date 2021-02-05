@@ -4,11 +4,16 @@ spring:
       enabled: false
     gateway:
       routes:
-        - id: drug
-#          uri: http://localhost:9001/
-          uri: lb://drug-service
+        - id: product
+#          uri: http://localhost:9010/
+          uri: lb://product-service
           predicates:
-            - Path= /drugs/**
+            - Path= /products/**
+         - id: marketplace
+#          uri: http://localhost:9010/
+          uri: lb://market-place-service
+          predicates:
+            - Path= /marketplaces/**
 server:
   port: 80
   application:
