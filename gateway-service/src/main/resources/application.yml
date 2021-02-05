@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    discovery:
+      enabled: false
+    gateway:
+      routes:
+        - id: drug
+#          uri: http://localhost:9001/
+          uri: lb://drug-service
+          predicates:
+            - Path= /drugs/**
+server:
+  port: 80
+  application:
+    name: gateway-service
