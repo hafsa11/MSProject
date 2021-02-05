@@ -12,7 +12,7 @@
     <artifactId>drug-service</artifactId>
     <version>0.0.1</version>
     <name>drug-service</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Epharm - Drug Store service</description>
     <properties>
         <java.version>15</java.version>
     </properties>
@@ -47,7 +47,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Spring Cloud -->
+        <!-- Spring Cloud Config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
@@ -65,6 +65,7 @@
             <version>3.0.0</version>
         </dependency>
 
+        <!-- Eureka Client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
