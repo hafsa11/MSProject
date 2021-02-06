@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: product
+          uri: lb://product
+          predicates:
+            - Path= /products/**
+        - id: marketplace
+          uri: lb://market-place
+          predicates:
+            - Path= /marketplaces/**
+server:
+  port: 80
